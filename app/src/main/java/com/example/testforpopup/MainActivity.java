@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         tv1.setText("現在數字:"+ num);
         if(num==1){
             if(frgm.getFragments().size()<1) {//getFragment是獲得目前存放在frgm裡Fragment的陣列
-                // 長度大小要小於1才能執行,這樣就保證已經fragment叫進來的情況又被叫進來一次
+                // 長度大小要小於1才能執行,這樣就保證已經fragment叫進來的情況不會被再叫進來一次
                 f1 = F1.createF1(true,false,true);//
                 frgm.beginTransaction().add(R.id.container, f1).commit();
             }else{
